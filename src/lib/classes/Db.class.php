@@ -90,4 +90,16 @@ class Db {
     return $type;
   }
 
+  /**
+   * Query db to get a list of stations
+   *
+   * @return {Function}
+   */
+  public function queryStations () {
+    $sql = 'SELECT * FROM lf_data
+      ORDER BY `type` ASC, `region` ASC, `lat` ASC';
+
+    return $this->_execQuery($sql);
+  }
+
 }
