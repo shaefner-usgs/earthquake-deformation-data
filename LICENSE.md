@@ -1,3 +1,5 @@
+# License
+
 Unless otherwise noted, This project is in the public domain in the United
 States because it contains materials that originally came from the United
 States Geological Survey, an agency of the United States Department of
