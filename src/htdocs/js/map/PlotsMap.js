@@ -18,7 +18,7 @@ require('map/TerrainLayer');
 /*
  * Factory for Leaflet map instance
  */
-var IndexMap = function (options) {
+var PlotsMap = function (options) {
   var _initialize,
       _this,
 
@@ -123,4 +123,4 @@ var IndexMap = function (options) {
 };
 
 
-module.exports = IndexMap;
+module.exports = PlotsMap;

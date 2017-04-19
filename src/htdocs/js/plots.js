@@ -1,8 +1,8 @@
 'use strict';
 
 
-var IndexMap = require('map/IndexMap');
+var PlotsMap = require('map/PlotsMap');
 
-IndexMap({
+PlotsMap({
   el: document.querySelector('.map')
 });
