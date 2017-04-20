@@ -12,6 +12,7 @@ if (!isset($TEMPLATE)) {
   include 'template.inc.php';
 }
 
+// Human-friendly fieldnames
 $lookup = [
   '10MIN' => '10-minute sampling',
   'code' => 'Code',
@@ -56,10 +57,10 @@ $tables = [
       represent human generated and cleaned data, these files are only updated
       periodically.</p>
       <p>More information can be found in the USGS Open File Report:
-      <a href="http://pubs.er.usgs.gov/publication/ofr89650">Catalog of
+      <a href="https://pubs.er.usgs.gov/publication/ofr89650">Catalog of
       creepmeter measurements in California from 1966 through 1988</a></p>
       <p>For information on 5 sites along the Hayward Fault (cpp, ctm, coz,
-      chp, and cfw) see: <a href="http://cires.colorado.edu/~bilham/creepmeter.file/creepmeters.htm">Surface
+      chp, and cfw) see: <a href="http://cires1.colorado.edu/~bilham/creepmeter.file/creepmeters.htm">Surface
       Creep on California faults</a></p>
     '
   ],
@@ -99,7 +100,7 @@ $tables = [
       instruments, one is a three component strainmeter made by <a
       href="/monitoring/deformation/data/instruments.php">Carnegie
       Dept. of Terrestial Magnetism</a> (DTM) and the other is a three or 4
-      component strainmeter made by <a href="http://www.gtsmtechnologies.com/index_files/nehrp.htm">GTSM
+      component strainmeter made by <a href="https://www.gtsmtechnologies.com/index_files/nehrp.htm">GTSM
       Technologies</a>. Since these instruments have at least 3 extensometers,
       these data can be combined into tensor strain based upon analysis using
       the Earth Tides. We provide both the extensometer and the tensor strain
@@ -119,6 +120,8 @@ $prevRegion = '';
 $table = '';
 
 while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
+  $baseUrl = $row['base_url'];
+  $baseUrl = str_replace('http://', 'https://', $baseUrl);
   $region = $row['region'];
   $type = $row['type'];
   $url = [];
@@ -126,28 +129,28 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
   // Create URL links to data
   foreach ($tables[$type]['fields'] as $field) {
     if ($type === 'Creepmeter') {
-      if ($row['base_url'] === 'http://escweb.wr.usgs.gov/share/langbein/Archive/HaywardCreep') {
+      if ($baseUrl === 'https://escweb.wr.usgs.gov/share/langbein/Archive/HaywardCreep') {
         $url[$field] = sprintf('%s/%s_merge.jl.gz',
-          $row['base_url'],
+          $baseUrl,
           strtolower(substr($row['code'], 0, 3))
         );
       }
       else if ($field === 'HDR') {
         $url[$field] = sprintf('%s/HDR/%s.hdr1',
-          $row['base_url'],
+          $baseUrl,
           strtolower($row['code'])
         );
       }
       else if ($field === 'MIC') {
         $url[$field] = sprintf('%s/%s/%s.m.gz',
-          $row['base_url'],
+          $baseUrl,
           $field,
           strtolower($row['code'])
         );
       }
       else {
         $url[$field] = sprintf('%s/%s/%s.%s.gz',
-          $row['base_url'],
+          $baseUrl,
           $field,
           strtolower($row['code']),
           strtolower($field)
@@ -162,19 +165,19 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
 
       if ($field == 'HDR') {
         $url[$field] = sprintf('%s/%s/ReadMe.gz',
-          $row['base_url'],
+          $baseUrl,
           strtoupper($row['code'])
         );
       }
       else if ($field == 'pressure') {
         $url[$field] = sprintf('%s/%s/press.jl.gz',
-          $row['base_url'],
+          $baseUrl,
           strtoupper($row['code'])
         );
       }
       else {
         $url[$field] = sprintf('%s/%s/%s_%s_Archive.jl.gz',
-          $row['base_url'],
+          $baseUrl,
           strtoupper($row['code']),
           strtolower($row['code']),
           $cols[$field]
@@ -194,7 +197,7 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
 
         if ($field !== 'subtype') {
           $url[$field] = sprintf('%s/%s_%s.tar.gz',
-            $row['base_url'],
+            $baseUrl,
             strtolower($row['code']),
             $cols[$field]
           );
@@ -208,11 +211,11 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
         );
 
         if ($field === 'HDR') {
-          $url[$field] = sprintf('%s/README.pdf', $row['base_url']);
+          $url[$field] = sprintf('%s/README.pdf', $baseUrl);
         }
         else if ($field === 'gage_clean' || $field === 'tensor_clean') {
           $url[$field] = sprintf('%s/%s_%s.tar.gz',
-            $row['base_url'],
+            $baseUrl,
             strtolower($row['code']),
             $cols[$field]
           );
@@ -244,7 +247,10 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
   }
   if ($prevRegion != $region) {
     $numCols = 5 + count($tables[$type]['fields']);
-    $table .= sprintf ('<tr><td colspan="%s"><h3>%s</h3></td></tr>', $numCols, $region);
+    $table .= sprintf ('<tr><td colspan="%s"><h3>%s</h3></td></tr>',
+      $numCols,
+      $region
+    );
   }
   $table .= sprintf ('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td>',
     $row['name'],
@@ -255,16 +261,20 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
   );
   foreach($tables[$type]['fields'] as $field) {
     if ($row[$field] === 'Y') {
-      $table .= sprintf ('<td class="data"><a href="%s"><i class="material-icons">&#xE2C4;</i></a></td>', $url[$field]);
+      $table .= sprintf ('<td class="data"><a href="%s">
+        <i class="material-icons">&#xE2C4;</i></a></td>', $url[$field]);
     }
     else {
-      $table .= '<td class="no-data"><i class="material-icons">&#xE14B;</i></td>';
+      $table .= '<td class="no-data" title="No data">
+        <i class="material-icons">&#xE14B;</i></td>';
     }
   }
   $table .= '</tr>';
+
   $prevType = $type;
   $prevRegion = $region;
 }
+
 $table .= sprintf ('</table>%s', $tables[$prevType]['notes']);
 
 print $table;
