@@ -1,0 +1,29 @@
+td[colspan] {
+  border-left: 0;
+  border-right: 0;
+
+  h3 {
+    margin-top: .5em;
+  }
+}
+
+th {
+  text-align: center;
+}
+
+.data, .no-data {
+  text-align: center;
+}
+
+.data a {
+  display: block;
+  color: #666;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.no-data {
+  color: #ddd;
+}
