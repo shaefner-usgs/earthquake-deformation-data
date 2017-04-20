@@ -51,12 +51,7 @@ var connect = {
 
   rules: [
     {
-      from: '^(' + MOUNT_PATH + ')(.*)/+$',
-      to: 'http://localhost:' + config.buildPort + '$1$2', // strip final '/'
-      redirect: 'permanent'
-    },
-    {
-      from: '^' + MOUNT_PATH + '/?(.*)$',
+      from: '^' + MOUNT_PATH + '/(.*)$',
       to: '/$1'
     }
   ],
@@ -68,7 +63,7 @@ var connect = {
       ],
       livereload: config.liveReloadPort,
       middleware: addMiddleware,
-      open: 'http://localhost:' + config.buildPort + MOUNT_PATH,
+      open: 'http://localhost:' + config.buildPort + MOUNT_PATH + '/',
       port: config.buildPort
     }
   },
