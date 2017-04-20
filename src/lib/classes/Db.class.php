@@ -97,7 +97,7 @@ class Db {
    */
   public function queryStations () {
     $sql = 'SELECT * FROM lf_data
-      ORDER BY `type` ASC, `region` ASC, `lat` ASC';
+      ORDER BY `type` ASC, `region` ASC, `lat` ASC, `name` ASC';
 
     return $this->_execQuery($sql);
   }
