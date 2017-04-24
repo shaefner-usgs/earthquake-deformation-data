@@ -113,7 +113,7 @@ $tables = [
 ];
 
 $db = new Db();
-$rsStations = $db->queryStations();
+$rsStations = $db->queryLbStations();
 
 $prevType = '';
 $prevRegion = '';
