@@ -96,7 +96,19 @@ class Db {
    * @return {Function}
    */
   public function queryStations () {
-    $sql = 'SELECT * FROM lf_data
+    $sql = 'SELECT * FROM `lf_data`
+      ORDER BY `site_name` ASC, `instrument_type` ASC';
+
+    return $this->_execQuery($sql);
+  }
+
+  /**
+   * Query db to get a list of stations (langbein's data)
+   *
+   * @return {Function}
+   */
+  public function queryLbStations () {
+    $sql = 'SELECT * FROM lf_data_langbein
       ORDER BY `type` ASC, `region` ASC, `lat` ASC, `name` ASC';
 
     return $this->_execQuery($sql);
