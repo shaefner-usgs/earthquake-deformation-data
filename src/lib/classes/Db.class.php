@@ -96,7 +96,10 @@ class Db {
    * @return {Function}
    */
   public function queryStations () {
+    // 2017-04-24: Exclude non-functioning instrument types
     $sql = 'SELECT * FROM `lf_data`
+      WHERE `instrument_type` != "Magnetometer"
+        AND `instrument_type` != "Pore Pressure"
       ORDER BY `site_name` ASC, `instrument_type` ASC';
 
     return $this->_execQuery($sql);
