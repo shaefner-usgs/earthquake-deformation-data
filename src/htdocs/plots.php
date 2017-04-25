@@ -12,6 +12,8 @@ if (!isset($TEMPLATE)) {
 
 ?>
 
+<p>Most instruments take measurements every 10 minutes. Plots are updated every 30 minutes.</p>
+
 <h2>Long Valley</h2>
 
 <p>Long Valley Caldera is located 20 km south of Mono Lake along the east side of the Sierra Nevada in east-central California. This area of eastern California has produced numerous volcanic eruptions over the past 3 million years including the massive, caldera-forming eruption 760,000 years ago. The most recent eruptions occurred just 500&ndash;600 years ago from vents along the Mono Crater-Inyo crater volcanic chain, which extends south from Mono Lake into the western part of Long Valley caldera.</p>
