@@ -15,7 +15,7 @@ _COLORS = {
   'Dilatometer': '#f90',
   'DTM Tensor Strainmeter': '#90f',
   'GTSM Tensor Strainmeter': '#0ff',
-  'Long Baseline Tiltmeter': '#c0c',
+  'Long Baseline Tiltmeter': '#cc0',
   'Multiple Instruments': '#666',
   'Tiltmeter': '#0c0'
 };
