@@ -1,1 +1,58 @@
 @import 'map/_map.scss';
+
+.legend {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 5px;
+
+  li {
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 1em .5em 0;
+    position: relative;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  svg {
+    height: 16px;
+    fill-opacity: .4;
+    position: absolute;
+    stroke-opacity: .7;
+    stroke-width: 1px;
+    width: 16px;
+  }
+}
+
+.creepmeter {
+  fill: #c00;
+  stroke: #c00;
+}
+.dilatometer {
+  fill: #f90;
+  stroke: #f90;
+}
+.dtm {
+  fill: #90f;
+  stroke: #90f;
+}
+.gtsm {
+  fill: #0ff;
+  stroke: #0ff;
+}
+.long-baseline {
+  fill: #cc0;
+  stroke: #cc0;
+}
+.multiple {
+  fill: #666;
+  stroke: #666;
+}
+.tiltmeter {
+  fill: #0c0;
+  stroke: #0c0;
+}

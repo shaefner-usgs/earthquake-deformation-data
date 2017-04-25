@@ -22,4 +22,49 @@ if (!isset($TEMPLATE)) {
 
 ?>
 
-<div class="map"></div>
+<div class="map">Interactive Map</div>
+
+<ul class="no-style legend">
+  <li>
+    <svg>
+      <circle class="creepmeter" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>Creepmeter</span>
+  </li>
+  <li>
+    <svg>
+      <circle class="dilatometer" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>Dilatometer</span>
+  </li>
+  <li>
+    <svg>
+      <circle class="dtm" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>DTM Tensor Strainmeter</span>
+  </li>
+  <li>
+    <svg>
+      <circle class="gtsm" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>GTSM Tensor Strainmeter</span>
+  </li>
+  <li>
+    <svg>
+      <circle class="long-baseline" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>Long Baseline Tiltmeter</span>
+  </li>
+  <li>
+    <svg>
+      <circle class="tiltmeter" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>Tiltmeter</span>
+  </li>
+  <li>
+    <svg>
+      <circle class="multiple" cx="8" cy="8" r="7"></circle>
+    </svg>
+    <span>Multiple Instruments</span>
+  </li>
+</ul>
