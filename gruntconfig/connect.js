@@ -75,7 +75,7 @@ var connect = {
       ],
       port: config.distPort,
       keepalive: true,
-      open: 'http://localhost:' + config.distPort + MOUNT_PATH,
+      open: 'http://localhost:' + config.distPort + MOUNT_PATH + '/',
       middleware: addMiddleware
     }
   },
