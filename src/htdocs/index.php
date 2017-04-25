@@ -11,7 +11,7 @@ if (!isset($TEMPLATE)) {
 
 ?>
 
-<p>The US Geological Survey maintains a variety of fault and volcano monitoring
+<p>The USGS maintains a variety of fault and volcano monitoring
   sites around the western United States. Instruments at these sites include
   strainmeters, tiltmeters and creepmeters, as well as other environmental
   parameters such as temperature and barometric pressure.</p>
@@ -26,11 +26,11 @@ if (!isset($TEMPLATE)) {
 <p>This web site provides <a href="plots.php">data plots</a> and
   <a href="download.php">data downloads</a> for many instruments that are
   concentrated in areas where large earthquakes are likely to occur in
-  California and areas of known volcanic activity (Long Valley, CA). In
+  California and areas of known volcanic activity. In
   particular, the USGS has concentrated instrumentation efforts in the San
   Francisco Bay Area, near San Juan Bautista and Parkfield, and the Long Valley,
   CA and Southern California regions.</p>
 
-<p class="disclaimer"><small>The plots and data on this site are generated
+<p><small>The plots and data on this site are generated
   automatically and are not reviewed. They should not be used for engineering,
   legal, or any other critical applications.</small></p>

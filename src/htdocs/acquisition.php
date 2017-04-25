@@ -62,7 +62,7 @@ if (!isset($TEMPLATE)) {
   on a regularly scheduled basis &mdash; typically every 30 minutes. Plots are
   created using The Generic Mapping Tools (GMT) program.</p>
 
-<p class="disclaimer"><small>The plots on this site should not be used for
+<p><small>The plots on this site should not be used for
   engineering, legal, or any other critical applications.</small></p>
 
 <h2>Timing the Data</h2>
@@ -90,7 +90,7 @@ if (!isset($TEMPLATE)) {
   pertinent to a study, the responsible researcher should be contacted
   concerning more precise data sample timing.</p>
 
-<p class="disclaimer"><small>The timing information on data plots and in data
+<p><small>The timing information on data plots and in data
   distributed from this site are not meant to reflect the most accurate timing
   information available. In general, time information should be taken as an
   approximation (within 10 minutes) of the time of actual data samples.</small></p>
