@@ -35,7 +35,9 @@ if (!isset($TEMPLATE)) {
 
 <h2 id="strain">Strainmeters</h2>
 
-<div class="align-right" style="width: 306px"><img src="img/dil2.gif" width="296" height="365" alt="strainmeter" /></div>
+<figure class="right">
+  <img src="img/dil2.gif" width="296" height="365" alt="strainmeter" />
+</figure>
 
 <p>Strainmeters for continuous crustal strain monitoring are highly sensitive
   instruments with precision of less than 1 part per billion (i.e. less than 1
@@ -87,7 +89,9 @@ if (!isset($TEMPLATE)) {
 
 <h2 id="tilt">Tiltmeters</h2>
 
-<div class="align-right" style="width: 306px"><img src="img/tilt.gif" width="296" height="412" alt="tiltmeter" /></div>
+<figure class="right">
+  <img src="img/tilt.gif" width="296" height="412" alt="tiltmeter" />
+</figure>
 
 <p>Tiltmeters are highly sensitive instruments used to measure ground tilt
   (rotation) near faults and volcanoes caused by fault slip and volcanic uplift.
