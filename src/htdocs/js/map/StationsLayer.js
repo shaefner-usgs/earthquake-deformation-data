@@ -77,11 +77,12 @@ var StationsLayer = function (options) {
     props = feature.properties;
 
     data = {
+      code: props.code,
       name: props.name,
       types: props.types
     };
     popupTemplate = '<div class="popup">' +
-        '<h2>{name}</h2>' +
+        '<h2>{name} ({code})</h2>' +
         '<p>{types}</p>' +
       '</div>';
     popup = L.Util.template(popupTemplate, data);

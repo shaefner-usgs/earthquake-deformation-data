@@ -32,11 +32,11 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
   }
 
   $stations[$name] = [
+    'code' => $row['site_abr'],
     'id' => $row['id'],
     'lat' => $row['lat'],
     'lon' => $row['lon'],
-    'types' => $types,
-    'region' => $row['region']
+    'types' => $types
   ];
 
   $prevName = $name;
@@ -54,8 +54,8 @@ foreach ($stations as $name => $station) {
       'type' => 'Point'
     ],
     'properties' => [
+      'code' => strtoupper($station['code']),
       'name' => ucwords(strtolower($name)),
-      'region' => $station['region'],
       'types' => implode(', ', $station['types'])
     ],
     'type' => 'Feature'
