@@ -230,10 +230,11 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
     if ($prevType) {
       $table .= sprintf ('</table>%s', $tables[$prevType]['notes']);
     }
-    $table .= sprintf ('<h2>%s</h2>%s<table class="tabular">',
+    $table .= sprintf ('<h2>%s</h2>%s<table>',
       $type,
       $tables[$type]['summary']
     );
+    // Common fields for all tables
     $table .= sprintf ('<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th>',
       $lookup['name'],
       $lookup['code'],
@@ -241,13 +242,14 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
       $lookup['lon'],
       $lookup['initial_obs']
     );
+    // Custom fields for specific tables
     foreach($tables[$type]['fields'] as $field) {
       $table .= "<th>$lookup[$field]</th>";
     }
     $table .= '</tr>';
   }
-  if ($prevRegion != $region) {
-    $numCols = 5 + count($tables[$type]['fields']);
+  if ($prevRegion !== $region) {
+    $numCols = 5 + count($tables[$type]['fields']); // common + custom fields
     $table .= sprintf ('<tr><td colspan="%s"><h3>%s</h3></td></tr>',
       $numCols,
       $region
@@ -276,6 +278,7 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
   $prevRegion = $region;
 }
 
+// Close final table tag / add notes
 $table .= sprintf ('</table>%s', $tables[$prevType]['notes']);
 
 print $table;
