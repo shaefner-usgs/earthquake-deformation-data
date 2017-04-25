@@ -1,1 +1,6 @@
-@import 'map/_map.scss'
+@import 'map/_map.scss';
+
+.no-data {
+  color: #ddd;
+  text-align: center;
+}
