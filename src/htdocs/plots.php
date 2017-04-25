@@ -1,23 +1,9 @@
 <?php
 
 if (!isset($TEMPLATE)) {
-  // template functions
-  include_once 'functions.inc.php';
-
-  // defines the $CONFIG hash of configuration variables
-  include_once '../conf/config.inc.php';
-
   $TITLE = 'Data Plots';
   $HEAD = '
-    <link rel="stylesheet" href="/lib/leaflet-0.7.7/leaflet.css" />
     <link rel="stylesheet" href="css/plots.css" />
-  ';
-  $FOOT = '
-    <script>
-      var MOUNT_PATH = "' . $CONFIG['MOUNT_PATH'] . '";
-    </script>
-    <script src="/lib/leaflet-0.7.7/leaflet.js"></script>
-    <script src="js/plots.js"></script>
   ';
   $NAVIGATION = true;
 
@@ -25,10 +11,6 @@ if (!isset($TEMPLATE)) {
 }
 
 ?>
-
-<h2>Map of Instrument Sites</h2>
-
-<div class="map"></div>
 
 <h2>Long Valley</h2>
 

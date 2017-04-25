@@ -13,9 +13,10 @@ if (preg_match("@^{$section}/(index.php)?$@", $url)) {
 $NAVIGATION =
   navGroup('Crustal Deformation Data',
     navItem("$section/", 'Overview', $matchesIndex) .
+    navItem("$section/instruments.php", 'Monitoring Instruments') .
+    navItem("$section/map.php", 'Map of Instrument Sites') .
     navItem("$section/plots.php", 'Data Plots') .
     navItem("$section/download.php", 'Download Data') .
-    navItem("$section/instruments.php", 'Monitoring Instruments') .
     navItem("$section/acquisition.php", 'Data Acquisition and Processing')
   );
 

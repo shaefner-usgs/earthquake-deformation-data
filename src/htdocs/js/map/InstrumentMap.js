@@ -22,7 +22,7 @@ require('map/TerrainLayer');
 /*
  * Factory for Leaflet map instance
  */
-var PlotsMap = function (options) {
+var InstrumentMap = function (options) {
   var _initialize,
       _this,
 
@@ -145,4 +145,4 @@ var PlotsMap = function (options) {
 };
 
 
-module.exports = PlotsMap;
+module.exports = InstrumentMap;
