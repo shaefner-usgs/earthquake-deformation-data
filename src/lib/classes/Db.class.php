@@ -112,7 +112,7 @@ class Db {
    */
   public function queryLbStations () {
     $sql = 'SELECT * FROM lf_data_langbein
-      ORDER BY `type` ASC, `region` ASC, `lat` ASC, `name` ASC';
+      ORDER BY `type` ASC, `region` ASC, `lat` DESC, `name` ASC';
 
     return $this->_execQuery($sql);
   }
