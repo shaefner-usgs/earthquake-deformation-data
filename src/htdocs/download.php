@@ -8,6 +8,7 @@ if (!isset($TEMPLATE)) {
   $TITLE = 'Download Data';
   $HEAD = '<link rel="stylesheet" href="css/download.css" />';
   $FOOT = '';
+  $NAVIGATION = true;
 
   include 'template.inc.php';
 }

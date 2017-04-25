@@ -4,6 +4,7 @@ if (!isset($TEMPLATE)) {
   $TITLE = 'Fault Creep, Borehole Strain, and Tiltmeter Monitoring Measurements';
   $HEAD = '';
   $FOOT = '';
+  $NAVIGATION = true;
 
   include 'template.inc.php';
 }
@@ -30,6 +31,6 @@ if (!isset($TEMPLATE)) {
   Francisco Bay Area, near San Juan Bautista and Parkfield, and the Long Valley,
   CA and Southern California regions.</p>
 
-<p class="disclaimer">The plots and data on this site are generated
+<p class="disclaimer"><small>The plots and data on this site are generated
   automatically and are not reviewed. They should not be used for engineering,
-  legal, or any other critical applications.</p>
+  legal, or any other critical applications.</small></p>
