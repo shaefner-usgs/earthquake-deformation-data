@@ -115,18 +115,6 @@ if (!isset($TEMPLATE)) {
     <td class="no-data" title="No data">
       <i class="material-icons">&#xE14B;</i></td>
   </tr>
-  <tr>
-    <td>Tiltmeter</td>
-    <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/USGS_strain/miniPBO_tilt_10.png">Past 7 days</a></td>
-    <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/USGS_strain/miniPBO_tilt_30.png">Past 30 days</a></td>
-    <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/USGS_strain/miniPBO_tilt_100.png">Past 100 days</a></td>
-    <td class="no-data" title="No data">
-      <i class="material-icons">&#xE14B;</i></td>
-    <td class="no-data" title="No data">
-      <i class="material-icons">&#xE14B;</i></td>
-    <td class="no-data" title="No data">
-      <i class="material-icons">&#xE14B;</i></td>
-  </tr>
 </table>
 
 <h2>San Juan Bautista</h2>
@@ -146,22 +134,5 @@ if (!isset($TEMPLATE)) {
     <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/Creep/sjb_730.png">Past 2 years</a></td>
     <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/Creep/sjb_1200.png">Past 3.2 years</a></td>
     <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/Creep/sjb_3650.png">Past 10 years</a></td>
-  </tr>
-</table>
-
-<h2>Southern California</h2>
-
-<p> The Southern California area is subject to thousands of earthquakes each year. In addition to the San Andreas Fault, there are over 200 known faults that can produce magnitude 6 or greater earthquakes. A small network of strainmeters monitors the region in the central transverse ranges of this region.</p>
-
-<table>
-  <tr>
-    <th>Instrument</th>
-    <th colspan="3">Plots</th>
-  </tr>
-  <tr>
-    <td>Dilatometers</td>
-    <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/USGS_strain/scal_10.png">Past 7 days</a></td>
-    <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/USGS_strain/scal_30.png">Past 30 days</a></td>
-    <td><a href="https://escweb.wr.usgs.gov/share/langbein/Web/USGS_strain/scal_100.png">Past 100 days</a></td>
   </tr>
 </table>
