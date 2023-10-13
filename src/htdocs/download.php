@@ -40,27 +40,27 @@ $tables = [
       'HDR', 'MIC', '10MIN', 'DAY'
     ],
     'summary' => '
-      <p>The data listed below are measures of surface fault slip (scaled in mm) 
-      as measured by creepmeters. Creepmeters consist of two piers separated by 
-      about 30 meters and connected by an invar wire. The main fault trace lies 
-      between the two piers. The invar wire oriented roughly a 30 degree angle 
-      from the local trace of the fault. A displacement transducer (LVDT) measures 
-      the change in length of the wire (or the change in distance between the 
+      <p>The data listed below are measures of surface fault slip (scaled in mm)
+      as measured by creepmeters. Creepmeters consist of two piers separated by
+      about 30 meters and connected by an invar wire. The main fault trace lies
+      between the two piers. The invar wire oriented roughly a 30 degree angle
+      from the local trace of the fault. A displacement transducer (LVDT) measures
+      the change in length of the wire (or the change in distance between the
       piers).</p>
-      <p>For many of the creepmeters, the measurements are made once every 10 
-      minutes and are sent via satellite telemetry to Menlo Park for analysis. 
-      In addition, periodic measurements are made manually for comparison with 
-      the electronically recorded data. For other creepmeters without telemetry, 
+      <p>For many of the creepmeters, the measurements are made once every 10
+      minutes and are sent via satellite telemetry to Menlo Park for analysis.
+      In addition, periodic measurements are made manually for comparison with
+      the electronically recorded data. For other creepmeters without telemetry,
       the measurements are made manually.</p>
-      <p>Below is a list of creepmeters, from North to South, located on the San 
-      Andreas, Hayward, and Calaveras Faults. For each site, the available data 
-      are listed. For sites with telemetry, the data are uploaded to this webpage 
-      daily. However, for the most recent observations, that is, within the past 
+      <p>Below is a list of creepmeters, from North to South, located on the San
+      Andreas, Hayward, and Calaveras Faults. For each site, the available data
+      are listed. For sites with telemetry, the data are uploaded to this webpage
+      daily. However, for the most recent observations, that is, within the past
       2 weeks, they have not always been reviewed and, if needed, edited.</p>
-      <p>Note that at some sites, there exists both 10 minute and 1-day sampled 
-      data. The 10-minute and 1-day sampled data often do not cover the same 
+      <p>Note that at some sites, there exists both 10 minute and 1-day sampled
+      data. The 10-minute and 1-day sampled data often do not cover the same
       interval of time. The 1-day data files will include older data.</p>
-      <p>The format of these data are year, day-of-year, and slip in mm. If there 
+      <p>The format of these data are year, day-of-year, and slip in mm. If there
       is a fourth column, then ignore that column.</p>
       <p>More information can be found in the USGS Open File Report:
       <a href="https://pubs.er.usgs.gov/publication/ofr89650">Catalog of
@@ -86,19 +86,19 @@ $tables = [
       </ul>
     ',
     'summary' => '
-      <p>The data listed below are measures of changes in volumetric strain 
-      (units of 0.001 part per million) as a function of time for instruments 
-      in California. Outliers due to telemetry problems, instrument visits, and 
-      etc have been removed. Offsets due to valve resets have been removed. Data 
-      are provided in two modes; 1) Cleaned strain data and 2) Clean strain data 
-      adjusted for the Earth Tide and atmospheric pressure changes. Pressure data 
+      <p>The data listed below are measures of changes in volumetric strain
+      (units of 0.001 part per million) as a function of time for instruments
+      in California. Outliers due to telemetry problems, instrument visits, and
+      etc have been removed. Offsets due to valve resets have been removed. Data
+      are provided in two modes; 1) Cleaned strain data and 2) Clean strain data
+      adjusted for the Earth Tide and atmospheric pressure changes. Pressure data
       (not scaled to units of pressure) are also provided.</p>
-      <p>The format of these data are year, day-of-year, and slip in mm. If there 
+      <p>The format of these data are year, day-of-year, and slip in mm. If there
       is a fourth column, then ignore that column.</p>
-      <p>Data are complete through the end of 2019. More data exist, but have not 
+      <p>Data are complete through the end of 2019. More data exist, but have not
       been archived.</p>
-      <p>The ReadMe file contains the lists of offsets and data removed for analysis. 
-      In addition, there is a table listing the estimates of the amplitude and phase 
+      <p>The ReadMe file contains the lists of offsets and data removed for analysis.
+      In addition, there is a table listing the estimates of the amplitude and phase
       of the O1 and M2 tides calculated as a function of time for the strainmeter.</p>
     '
   ],
@@ -116,34 +116,34 @@ $tables = [
       </ol>
     ',
     'summary' => '
-      <p>The data listed below are measures of changes in tensor strain (units 
-      of 0.001 part per million) as a function of time for instruments in 
-      California. We are providing data for two different instruments, one is 
-      a three component strainmeter made by 
-      <a href="/monitoring/deformation/data/instruments.php">Carnegie Dept. of 
-      Terrestial Magnetism</a> (DTM) and the other is a three or 4 component 
-      strainmeter made by 
-      <a href="https://www.gtsmtechnologies.com/index_files/nehrp.htm">GTSM 
-      Technologies</a>. Since these instruments have at least 3 extensometers, 
-      these data can be combined into tensor strain based upon analysis using 
-      the Earth Tides. We provide both the extensometer and the tensor strain 
-      changes. Data are provided in two modes; 1) Cleaned strain data and 2) 
-      Clean strain data adjusted for the Earth Tide and atmospheric pressure 
+      <p>The data listed below are measures of changes in tensor strain (units
+      of 0.001 part per million) as a function of time for instruments in
+      California. We are providing data for two different instruments, one is
+      a three component strainmeter made by
+      <a href="/monitoring/deformation/data/instruments.php">Carnegie Dept. of
+      Terrestial Magnetism</a> (DTM) and the other is a three or 4 component
+      strainmeter made by
+      <a href="https://www.gtsmtechnologies.com/index_files/nehrp.htm">GTSM
+      Technologies</a>. Since these instruments have at least 3 extensometers,
+      these data can be combined into tensor strain based upon analysis using
+      the Earth Tides. We provide both the extensometer and the tensor strain
+      changes. Data are provided in two modes; 1) Cleaned strain data and 2)
+      Clean strain data adjusted for the Earth Tide and atmospheric pressure
       changes.  Outliers due to telemetry problems, instrument visits, and etc
       have been removed. Offsets due to valve resets, for the Carnegie, DTM
-      instruments, have been removed. Pressure data (not scaled to units of 
-      pressure) are also provided. Gauge data for the DTM instruments are not 
+      instruments, have been removed. Pressure data (not scaled to units of
+      pressure) are also provided. Gauge data for the DTM instruments are not
       scaled to physical units.</p>
-      <p>For the GTSM instruments, the data are complete. These GTSM instruments 
-      are identified with a 3 letter code. None of these GTSM instruments 
+      <p>For the GTSM instruments, the data are complete. These GTSM instruments
+      are identified with a 3 letter code. None of these GTSM instruments
       currently work after more than 20 years of continuous operation.</p>
-      <p>For the DTM instruments, the data are complete through the end of 
+      <p>For the DTM instruments, the data are complete through the end of
       2019. More data exist, but have not been archived.</p>
-      <p>The ReadMe file contains the lists of offsets and data removed for 
-      analysis. In addition, there is a table listing the estimates of the 
-      amplitude and phase of the O1 and M2 tides calculated as a function of 
+      <p>The ReadMe file contains the lists of offsets and data removed for
+      analysis. In addition, there is a table listing the estimates of the
+      amplitude and phase of the O1 and M2 tides calculated as a function of
       time for the strainmeter.</p>
-      <p>The format of these data are year, day-of-year, and slip in mm. If 
+      <p>The format of these data are year, day-of-year, and slip in mm. If
       there is a fourth column, then ignore that column.</p>
     '
   ]
@@ -166,13 +166,7 @@ while ($row = $rsStations->fetch(PDO::FETCH_ASSOC)) {
   // Create URL links to data
   foreach ($tables[$type]['fields'] as $field) {
     if ($type === 'Creepmeter') {
-      if ($baseUrl === 'https://escweb.wr.usgs.gov/share/langbein/Archive/HaywardCreep') {
-        $url[$field] = sprintf('%s/%s_merge.jl.gz',
-          $baseUrl,
-          strtolower(substr($row['code'], 0, 3))
-        );
-      }
-      else if ($field === 'HDR') {
+      if ($field === 'HDR') {
         $url[$field] = sprintf('%s/HDR/%s.hdr1',
           $baseUrl,
           strtolower($row['code'])
