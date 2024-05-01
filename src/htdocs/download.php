@@ -62,13 +62,11 @@ $tables = [
       interval of time. The 1-day data files will include older data.</p>
       <p>The format of these data are year, day-of-year, and slip in mm. If there
       is a fourth column, then ignore that column.</p>
-      <p>More information can be found in the USGS Open File Report:
-      <a href="https://pubs.er.usgs.gov/publication/ofr89650">Catalog of
-      creepmeter measurements in California from 1966 through 1988</a></p>
-      <p>For information on 5 sites along the Hayward Fault (cpp, ctm, coz,
-      chp, and cfw) see: <a href="http://cires1.colorado.edu/~bilham/creepmeter.file/creepmeters.htm">Surface
-      Creep on California faults</a></p>
-    '
+      <h3>How to Cite Creepmeter Data</h3>
+      <p>Please reference <a href="https://pubs.usgs.gov/publication/ofr20241011">Open-File Report 2024-1011</a>,
+      “Summary of Creepmeter Data from 1980 to 2020—Measurements Spanning the
+      Hayward, Calaveras, and San Andreas Faults in Northern and Central
+      California”</p>'
   ],
   'Dilatometer' => [
     'fields' => [
